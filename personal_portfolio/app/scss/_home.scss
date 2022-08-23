@@ -1,0 +1,118 @@
+.home {
+  &__container {
+    gap: 1rem;
+
+    @include breakpoint-up(large) {
+      row-gap: 5rem;
+    }
+  }
+
+  &__content {
+    grid-template-columns: 1.5fr 3fr;
+    padding-top: 3.5rem;
+    align-items: center;
+
+    @include breakpoint-up(medium) {
+      grid-template-columns: max-content 1fr 1fr;
+    }
+
+    @include breakpoint-up(large) {
+      padding-top: 5.5rem;
+      column-gap: 2rem;
+    }
+  }
+
+  &__social {
+    display: grid;
+    grid-template-columns: max-content;
+    row-gap: 1rem;
+
+    &-icon {
+      font-size: 1.25rem;
+      color: $theme-color;
+
+      &:hover {
+        color: $theme-color-alt;
+      }
+    }
+  }
+
+  &__img {
+    @include breakpoint-up(medium) {
+      order: 1;
+      justify-self: center;
+    }
+  }
+
+  &__blob {
+    width: 12.25rem;
+    fill: $theme-color;
+
+    @include breakpoint-up(large) {
+      width: 16.875;
+    }
+
+    &-img {
+      width: 10.625rem;
+    }
+  }
+
+  &__data {
+    grid-column: 1/3;
+
+    @include breakpoint-up(medium) {
+      grid-column: initial;
+    }
+  }
+
+  &__title {
+    font-size: $font-lg;
+  }
+
+  &__subtitle {
+    font-size: $font-h3;
+    color: $theme-color;
+    font-weight: $weight-med;
+    margin: 0.75rem;
+  }
+
+  &__description {
+    margin-bottom: 2rem;
+  }
+
+  &__scroll {
+    display: none;
+
+    @include breakpoint-up(large) {
+      display: block;
+    }
+
+    &-button {
+      color: $theme-color;
+      transition: 0.3s;
+
+      @include breakpoint-up(large) {
+        margin-left: 3rem;
+      }
+
+      &:hover {
+        transform: translateY(0.25rem);
+      }
+    }
+
+    &-mouse {
+      font-size: 2rem;
+    }
+
+    &-name {
+      font-size: $font-sm;
+      color: $title-color;
+      font-weight: $weight-med;
+      margin-right: 0.25rem;
+    }
+
+    &-arrow {
+      font-size: 1.25rem;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+h1 {
+  color: gold;
+}
+
+#message1-el {
+  font-style: italic;
+}
+
+body {
+  background-image: url(./images/bg1.jpg);
+  background-size: cover;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-attachment: fixed;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+}
+
+button {
+  color: #016f32;
+  width: 150px;
+  background: gold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 2px;
+}

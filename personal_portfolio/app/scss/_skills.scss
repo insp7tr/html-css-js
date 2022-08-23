@@ -1,0 +1,113 @@
+.skills {
+  &__container {
+    row-gap: 0;
+
+    @include breakpoint-up(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    cursor: pointer;
+  }
+
+  &__icon,
+  &__arrow {
+    font-size: 2rem;
+    color: $theme-color;
+  }
+
+  &__icon {
+    margin-right: 0.75rem;
+  }
+
+  &__title {
+    font-size: $font-h3;
+  }
+
+  &__subtitle {
+    font-size: $font-sm;
+    color: $text-color-light;
+  }
+
+  &__arrow {
+    margin-left: auto;
+    transition: 0.4s;
+  }
+
+  &__list {
+    row-gap: 1.5rem;
+    padding-left: 2.7rem;
+  }
+
+  &__titles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+
+  &__name {
+    font-size: $font-med;
+    font-weight: $weight-med;
+  }
+
+  &__bar,
+  &__percentage {
+    height: 0.3125rem;
+    border-radius: 0.25rem;
+  }
+
+  &__bar {
+    background-color: $theme-color-lighter;
+  }
+
+  &__percentage {
+    display: block;
+    background-color: $theme-color;
+  }
+
+  &__open &__list {
+    height: max-content;
+    margin-bottom: 2.5rem;
+  }
+
+  &__open &__arrow {
+    transform: rotate(-180deg);
+  }
+
+  &__close &__list {
+    height: 0;
+    overflow: hidden;
+  }
+
+  &__90 {
+    width: 90%;
+  }
+
+  &__80 {
+    width: 80%;
+  }
+
+  &__70 {
+    width: 70%;
+  }
+
+  &__60 {
+    width: 60%;
+  }
+
+  &__55 {
+    width: 55%;
+  }
+
+  &__50 {
+    width: 50%;
+  }
+
+  &__40 {
+    width: 40%;
+  }
+}

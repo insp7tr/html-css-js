@@ -1,0 +1,111 @@
+.services {
+  &__container {
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(3, 218px);
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    position: relative;
+    background-color: $container-color;
+    padding: 3.5rem 0.5rem 1.25rem 1.5rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+
+    @include breakpoint-up(large) {
+      padding: 6rem 0 2rem 2.5rem;
+    }
+
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__icon {
+    display: block;
+    font-size: 1.5rem;
+    color: $text-color;
+    margin-bottom: 1rem;
+
+    @include breakpoint-up(large) {
+      font-size: 2rem;
+    }
+  }
+
+  &__title {
+    font-size: $font-h3;
+    margin-bottom: 1rem;
+    font-weight: $font-med;
+  }
+
+  &__button {
+    cursor: pointer;
+    font-size: $font-sm;
+
+    &:hover .button__icon {
+      transform: translateX(0.25rem);
+    }
+  }
+
+  &__modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    z-index: $z-modal;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+
+    &-content {
+      position: relative;
+      background-color: $container-color;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+    }
+
+    &-services {
+      row-gap: 1rem;
+    }
+
+    &-service {
+      display: flex;
+    }
+
+    &-title {
+      font-size: $font-h3;
+      font-weight: $weight-med;
+      margin-bottom: 1.5rem;
+    }
+
+    &-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.5rem;
+      color: $theme-color;
+      cursor: pointer;
+    }
+
+    &-icon {
+      color: $theme-color;
+      margin-right: 0.25rem;
+    }
+  }
+}
+
+.active-modal {
+  opacity: 1;
+  visibility: visible;
+}

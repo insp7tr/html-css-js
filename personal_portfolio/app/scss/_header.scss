@@ -1,0 +1,122 @@
+.header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: $z-fixed;
+  background-color: $body-color;
+
+  @include breakpoint-up(large) {
+    top: 0;
+    bottom: initial;
+    padding: 0 1rem;
+  }
+}
+
+.nav {
+  max-width: 60.5rem;
+  height: $header-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include breakpoint-up(large) {
+    height: calc($header-height + 1.5rem);
+    column-gap: 1rem;
+  }
+
+  &__logo,
+  &__toggle {
+    color: $title-color;
+    font-weight: $weight-med;
+  }
+
+  &__logo:hover {
+    color: $theme-color;
+  }
+
+  &__toggle {
+    font-size: 1.1rem;
+    cursor: pointer;
+
+    &:hover {
+      color: $theme-color;
+    }
+  }
+
+  &__menu {
+    @include breakpoint-down(medium) {
+      position: fixed;
+      bottom: -100%;
+      left: 0;
+      width: 100%;
+      background-color: $body-color;
+      padding: 2rem 0.25rem 4rem;
+      box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 1.5rem 1.5rem 0 0;
+      transition: 0.3s;
+    }
+
+    @include breakpoint-up(large) {
+      margin-left: auto;
+    }
+  }
+
+  &__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    column-gap: 0;
+
+    @include breakpoint-up(large) {
+      display: flex;
+      column-gap: 2rem;
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: $font-sm;
+    color: $title-color;
+    font-weight: $weight-med;
+
+    &:hover {
+      color: $theme-color;
+    }
+  }
+
+  &__icon {
+    font-size: 1.2rem;
+  }
+
+  &__close {
+    position: absolute;
+    right: 1.3rem;
+    bottom: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: $theme-color;
+
+    &:hover {
+      color: $theme-color-alt;
+    }
+  }
+
+  &__icon,
+  &__close,
+  &__toggle {
+    @include breakpoint-up(large) {
+      display: none;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.show-menu {
+  bottom: 0;
+}

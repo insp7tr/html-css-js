@@ -1,0 +1,72 @@
+.portfolio {
+  &__container {
+    overflow: initial;
+  }
+
+  &__content {
+    padding: 0 1.5rem;
+
+    @include breakpoint-up(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint-up(large) {
+      align-items: center;
+    }
+  }
+
+  &__img {
+    width: 16.5625rem;
+    border-radius: 0.5rem;
+    justify-self: center;
+
+    @include breakpoint-up(large) {
+      width: 320px;
+    }
+  }
+
+  &__title {
+    font-size: $font-h3;
+    margin-bottom: 0.5rem;
+  }
+
+  &__description {
+    margin-bottom: 0.75rem;
+  }
+
+  &__button:hover .button__icon {
+    transform: translateX(0.25rem);
+  }
+}
+
+.swiper-wrapper {
+  padding-bottom: 50px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "";
+}
+
+.swiper-portfolio-icon {
+  font-size: 2rem;
+  color: $theme-color;
+}
+
+.swiper-button-prev {
+  left: -0.5rem;
+}
+
+.swiper-button-next {
+  right: -0.5rem;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $theme-color;
+}
+
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination-bullet {
+  outline: none;
+}

@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 0 $header-height 0;
+  font-family: "Poppins", sans-serif;
+  font-size: $font-med;
+  background-color: $body-color;
+  color: $text-color;
+
+  @include breakpoint-up(medium) {
+    margin: 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $title-color;
+  font-weight: $weight-semi-bold;
+}
+
+h1 {
+  font-size: $font-h1;
+}
+
+h2 {
+  font-size: $font-h2;
+}
+
+h3 {
+  font-size: $font-h3;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Reusable CSS classes
+.main {
+  padding: 0 1rem;
+}
+
+.section {
+  padding: 2rem 0 4rem;
+
+  @include breakpoint-up(medium) {
+    padding: 6rem 0 2rem;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+
+    @include breakpoint-up(large) {
+      font-size: 2.25rem;
+    }
+  }
+
+  &__subtitle {
+    display: block;
+    font-size: $font-sm;
+    margin-bottom: 3rem;
+
+    @include breakpoint-up(medium) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__title,
+  &__subtitle {
+    text-align: center;
+  }
+}
+
+.container {
+  max-width: 48rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  @include breakpoint-up(large) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.active-link {
+  color: $theme-color;
+}
+
+.scroll-header {
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  background-color: $theme-color;
+  opacity: 0.8;
+  padding: 0 0.3rem;
+  border-radius: 0.4rem;
+  z-index: $z-tooltip;
+  transition: 0.4s;
+
+  &__icon {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: $theme-color-alt;
+  }
+}
+
+.show-scroll {
+  bottom: 5rem;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: $scroll-bar-color;
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $scroll-thumb-color;
+  border-radius: 0.5rem;
+
+  &:hover {
+    background-color: $text-color-light;
+  }
+}

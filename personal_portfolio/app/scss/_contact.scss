@@ -1,0 +1,52 @@
+.contact {
+  &__container {
+    row-gap: 3rem;
+
+    @include breakpoint-up(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__information {
+    display: flex;
+    margin-bottom: 2rem;
+  }
+
+  &__icon {
+    font-size: 2rem;
+    color: $theme-color;
+    margin-right: 0.75rem;
+  }
+
+  &__title {
+    font-size: $font-h3;
+    font-weight: $weight-med;
+  }
+
+  &__subtitle {
+    font-size: $font-sm;
+    color: $text-color-light;
+  }
+
+  &__content {
+    background-color: $input-color;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem 0.25rem;
+  }
+
+  &__label {
+    font-size: $font-xs;
+    color: $title-color;
+  }
+
+  &__input {
+    width: 100%;
+    background-color: $input-color;
+    color: $text-color;
+    font-family: "Poppins", sans-serif;
+    font-size: $font-med;
+    border: none;
+    outline: none;
+    padding: 0.25rem 0.5rem 0.5rem 0;
+  }
+}

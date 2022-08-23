@@ -1,0 +1,40 @@
+.testimonial {
+  &__data,
+  &__header {
+    display: flex;
+  }
+
+  &__data {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  &__img {
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 50%;
+    margin-right: 0.75rem;
+  }
+
+  &__name {
+    font-size: $font-h3;
+    font-weight: $weight-med;
+  }
+
+  &__client {
+    font-size: $font-sm;
+    color: $text-color-light;
+  }
+
+  &__description {
+    margin-bottom: 2.5rem;
+  }
+
+  &__icon-star {
+    color: $theme-color;
+  }
+}
+
+.swiper .swiper-pagination {
+  bottom: 0;
+}

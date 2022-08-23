@@ -1,0 +1,13 @@
+@import "variables";
+@import "mixins";
+
+.change-theme {
+  font-size: 1.25rem;
+  color: $title-color;
+  margin-right: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    color: $theme-color;
+  }
+}
